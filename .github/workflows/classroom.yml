@@ -1,0 +1,65 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: general test
+      id: general-test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: general test
+        setup-command: ''
+        command: gradle test
+        timeout: 10
+    - name: day 1
+      id: day-1
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: day 1
+        setup-command: ''
+        command: gradle test --tests "TestDay1"
+        timeout: 10
+    - name: day 2
+      id: day-2
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: day 2
+        setup-command: ''
+        command: gradle test --tests "TestDay2"
+        timeout: 10
+    - name: day 3
+      id: day-3
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: day 3
+        setup-command: ''
+        command: gradle test --tests "TestDay3"
+        timeout: 10
+    - name: day 4
+      id: day-4
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: day 4
+        setup-command: ''
+        command: gradle test --tests "TestDay4"
+        timeout: 10
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        GENERAL-TEST_RESULTS: "${{steps.general-test.outputs.result}}"
+        DAY-1_RESULTS: "${{steps.day-1.outputs.result}}"
+        DAY-2_RESULTS: "${{steps.day-2.outputs.result}}"
+        DAY-3_RESULTS: "${{steps.day-3.outputs.result}}"
+        DAY-4_RESULTS: "${{steps.day-4.outputs.result}}"
+      with:
+        runners: general-test,day-1,day-2,day-3,day-4
