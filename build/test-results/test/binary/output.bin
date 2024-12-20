@@ -1,36 +1,0 @@
-Name= Dasher
-Speed = 100
-run duration=5
-rest duration=2
-Distance Traveled=7200
-
-Name= Dancer
-Speed = 120
-run duration=4
-rest duration=3
-Distance Traveled=6960
-
-Name= Prancer
-Speed = 70
-run duration=6
-rest duration=1
-Distance Traveled=6020
-
-Name= Dasher
-Speed = 100
-run duration=5
-rest duration=2
-Distance Traveled=800
-
-Name= Dancer
-Speed = 120
-run duration=4
-rest duration=3
-Distance Traveled=840
-
-Name= Prancer
-Speed = 110
-run duration=6
-rest duration=1
-Distance Traveled=990
-

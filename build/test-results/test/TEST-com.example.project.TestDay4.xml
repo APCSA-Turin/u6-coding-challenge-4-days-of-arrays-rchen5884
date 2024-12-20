@@ -1,46 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.project.TestDay4" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-12-14T14:31:01" hostname="codespaces-a0ea89" time="0.052">
+<testsuite name="com.example.project.TestDay4" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-12-20T01:45:41" hostname="codespaces-513c06" time="0.012">
   <properties/>
-  <testcase name="testSimulateRaceLongerDuration()" classname="com.example.project.TestDay4" time="0.035"/>
+  <testcase name="testSimulateRaceLongerDuration()" classname="com.example.project.TestDay4" time="0.002"/>
   <testcase name="testSimulateSecondRunning()" classname="com.example.project.TestDay4" time="0.001"/>
-  <testcase name="testReindeerCreation()" classname="com.example.project.TestDay4" time="0.0"/>
-  <testcase name="testSimulateRaceWithHardcodedReindeers()" classname="com.example.project.TestDay4" time="0.005"/>
-  <system-out><![CDATA[Name= Dasher
-Speed = 100
-run duration=5
-rest duration=2
-Distance Traveled=7200
-
-Name= Dancer
-Speed = 120
-run duration=4
-rest duration=3
-Distance Traveled=6960
-
-Name= Prancer
-Speed = 70
-run duration=6
-rest duration=1
-Distance Traveled=6020
-
-Name= Dasher
-Speed = 100
-run duration=5
-rest duration=2
-Distance Traveled=800
-
-Name= Dancer
-Speed = 120
-run duration=4
-rest duration=3
-Distance Traveled=840
-
-Name= Prancer
-Speed = 110
-run duration=6
-rest duration=1
-Distance Traveled=990
-
-]]></system-out>
+  <testcase name="testReindeerCreation()" classname="com.example.project.TestDay4" time="0.002"/>
+  <testcase name="testSimulateRaceWithHardcodedReindeers()" classname="com.example.project.TestDay4" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
