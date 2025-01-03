@@ -5,7 +5,6 @@ import java.util.Random;
 
 public class Day2 {
     public static String[][] nameSort(String[] names) {
-        // Validate input
         if (names == null || names.length == 0) {
             return new String[][]{new String[12], new String[12]};
         }
@@ -16,11 +15,11 @@ public class Day2 {
         Random random = new Random();
 
         // Iterate through names and assign them to either "Nice" or "Naughty" list
-        for (String name : names) {
+        for (int i = 0; i < names.length; i++) {
             if (random.nextBoolean()) { // Randomly decide
-                niceList.add(name);
+                niceList.add(names[i]);
             } else {
-                naughtyList.add(name);
+                naughtyList.add(names[i]);
             }
         }
 
@@ -46,9 +45,8 @@ public class Day2 {
                 arr[1][i] = null;
             }
         }
-        return arr; 
+        return arr;
     }
-
 
     public static void main(String[] args) {
         // Example usage
@@ -57,13 +55,13 @@ public class Day2 {
 
         // Print the results
         System.out.println("Nice List: ");
-        for (String name : sortedLists[0]) {
-            System.out.println(name);
+        for (int i = 0; i < sortedLists[0].length; i++) {
+            System.out.println(sortedLists[0][i]);
         }
 
         System.out.println("Naughty List: ");
-        for (String name : sortedLists[1]) {
-            System.out.println(name);
+        for (int i = 0; i < sortedLists[1].length; i++) {
+            System.out.println(sortedLists[1][i]);
         }
     }
 }

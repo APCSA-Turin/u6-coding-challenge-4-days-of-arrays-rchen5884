@@ -30,9 +30,9 @@ public class Day3 {
 
     // Prints the snowflake - useful for debugging (you will not be tested on this method)
     public static void printSnowflake(String[][] snowflake) {
-        for (String[] row : snowflake) {
-            for (String cell : row) {
-                System.out.print(cell);
+        for (int i = 0; i < snowflake.length; i++) {
+            for (int j = 0; j < snowflake[i].length; j++) {
+                System.out.print(snowflake[i][j]);
             }
             System.out.println();
         }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.project.TestDay2" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-12-20T01:45:41" hostname="codespaces-513c06" time="0.001">
+<testsuite name="com.example.project.TestDay2" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-01-03T02:20:57" hostname="codespaces-513c06" time="0.003">
   <properties/>
-  <testcase name="testSortNames()" classname="com.example.project.TestDay2" time="0.001"/>
+  <testcase name="testSortNames()" classname="com.example.project.TestDay2" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

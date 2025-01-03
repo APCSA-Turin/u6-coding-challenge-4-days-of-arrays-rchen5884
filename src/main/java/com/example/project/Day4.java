@@ -1,4 +1,5 @@
 package com.example.project;
+
 import java.util.Random;
 
 public class Day4 {
@@ -58,18 +59,18 @@ public class Day4 {
 
     public static String simulateRace(int time, Reindeer[] reindeers) {
         for (int t = 0; t < time; t++) {
-            for (Reindeer reindeer : reindeers) {
-                reindeer.simulateSecond();
+            for (int i = 0; i < reindeers.length; i++) {
+                reindeers[i].simulateSecond();
             }
         }
 
         // Find the reindeer with the maximum distance traveled
         Reindeer winner = null;
         int maxDistance = 0;
-        for (Reindeer reindeer : reindeers) {
-            if (reindeer.getDistanceTraveled() > maxDistance) {
-                maxDistance = reindeer.getDistanceTraveled();
-                winner = reindeer;
+        for (int i = 0; i < reindeers.length; i++) {
+            if (reindeers[i].getDistanceTraveled() > maxDistance) {
+                maxDistance = reindeers[i].getDistanceTraveled();
+                winner = reindeers[i];
             }
         }
 
